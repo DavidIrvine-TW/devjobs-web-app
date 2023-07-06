@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s ease-in-out;
+}
+img {
+    max-width: 100%;
+}
+
+/* header bg img */
+header {
+    background-image: url('./assets/bg-pattern-mb.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#large-search-bar {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        background-image: url('./assets/bg-pattern-tab.svg');
+    }
+    #mobile-search-bar {
+        display: none
+    }
+    #large-search-bar {
+        display: inline-flex;
+    }
+}
+@media screen and (min-width: 1200px) {
+    header {
+        background-image: url('./assets/bg-pattern-dk.svg');
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 0.5s ease-in forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
